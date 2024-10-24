@@ -1,0 +1,44 @@
+/* Sección Nosotros */
+.abouts {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: left; /* Centra el texto */
+}
+
+.abouts h2 {
+    font-size: 36px;
+    color: #272727;
+    margin-bottom: 20px;
+}
+
+.abouts p {
+    line-height: 1.6;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555; /* Color del texto */
+}
+
+.about-images {
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+    text-align: center; /* Centra la imagen */    
+}
+
+.about-images img {
+    width: 250px; /* Ajusta el tamaño del logo aquí */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.about-images img:hover {
+    transform: scale(1.05); /* Aumenta la imagen al pasar el mouse */
+}
+
+/* Footer */
+footer {
+    background-color: #272727;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px; /* Espacio arriba del pie de página */
+}
