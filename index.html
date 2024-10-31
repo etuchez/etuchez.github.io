@@ -6,178 +6,195 @@
     <meta name="description" content="AMC Ingeniería Eléctrica ofrece soluciones energéticas innovadoras en Centroamérica.">
     <meta name="keywords" content="ingeniería eléctrica, soluciones energéticas, automatización, calidad de energía">
     <title>AMC Ingeniería Eléctrica</title>
+    <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_home_image.css">
+    <link rel="stylesheet" href="css/styles_arrow_up.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Encabezado y Navegación -->
     <header>
-        <nav class="navbar">
-            <div class="container">
+        <nav class="navbar animated fadeInDown">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+            <div class="container-menu">
                 <div class="logo">
-                    <img src="logo.png" alt="AMC Ingeniería Eléctrica">
+                    <img src="assets/logo.jpg" alt="AMC Ingeniería Eléctrica">
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#servicios">Servicios</a></li>
+                    <li class="b active1"><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Sección Hero -->
-    <section class="hero">
-        <div class="container hero-super">
-            <div class="container hero-content">
-                <h1 class="animated fadeIn">Soluciones Energéticas Innovadoras para la Industria Centroamericana.</h1>
-                <p class="animated fadeInLeft">Enfocados en suplir las necesidades en ingeniería, suministro de equipos y 
-                    soluciones en automatización, medición y control para proyectos en el sector energía e industrial.</p>
-                <a href="#contacto" class="btn btn-primary animated fadeIn">Contáctanos</a>
+    <div class="contenedor">
+        <!-- Sección Hero -->
+        <section id="inicio" class="slides hero show-animate">
+            <div class="container hero-super">
+                <div class="container hero-content">
+                    <div class="animated-text">
+                        <h1 class="animated fadeInUp">Soluciones <span></span> Innovadoras para la Industria Centroamericana.</h1>
+                    </div>
+                    <p class="animated fadeInLeft">Enfocados en suplir las necesidades en ingeniería, suministro de equipos y 
+                        soluciones en automatización, medición y control para proyectos en el sector energía e industrial.</p>
+                    <a href="#contacto" class="btn btn-primary animated fadeIn">Contáctanos</a>
+                </div>  
             </div>
-            <div class="hero-logo animated fadeIn">
-                <img src="assets/LogoAMC_Big.png" alt="Logo de AMC Ingeniería Eléctrica">
+            <div class="pentagon-wrapper animated fadeInRight">
+                <div class="pentagon-image" style="background-image: url(assets/home/Home-Fondo.gif);"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Nosotros -->
-    <section id="nosotros" class="about">        
-        <div class="container about-content">
-            <div class="about-image">
-                <img src="assets/tecnico.jpg" class="about-image-background" alt="Imagen de fondo">        
+        <!-- Sección Nosotros -->
+        <section id="nosotros" class="slides about show-animate">        
+            <div class="about-logo">
+                <section class="images">
+                    <div class="image activo" style="background-image: url(assets/home/image1.jpg);"></div>
+                    <div class="image" style="background-image: url(assets/home/image2.jpg);"></div>
+                    <div class="image" style="background-image: url(assets/home/image3.jpg);"></div>
+                </section>
             </div>
-            <div class="about-text">
-                <h2>Desde 2021, proporcionando soluciones de ingeniería eléctrica.</h2>
-                <p>Equipo humano altamente capacitado y comprometido. Amplia experiencia en la industria energética.</p>
-                <a href="about.html" class="btn btn-secondary">Nosotros</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Servicios -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <img src="assets/Mantenimiento.png" alt="Mantenimiento Eléctrico">
-                    <h3>Mantenimiento Eléctrico</h3>
-                    <ul>
-                        <li>Transformadores</li>
-                        <li>Pruebas eléctricas y Termografía</li>
-                        <li>Reconectadores</li>
-                        <li>Centros de distribución</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <img src="assets/calidad.png" alt="Calidad de Energía">
-                    <h3>Calidad de Energía</h3>
-                    <ul>
-                        <li>Auditorias Energéticas</li>
-                        <li>Soluciones para mejorar el Factor de Potencia</li>
-                        <li>Mitigación de Armónicos</li>
-                        <li>Regulación de Tensión</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <img src="assets/Medicion.png" alt="Medición de Energía">
-                    <h3>Medición de Energía</h3>
-                    <ul>
-                        <li>Medidores de Energía</li>
-                        <li>Transformadores de Instrumento (PTs / CTs)</li>
-                        <li>Cajas Socket</li>
-                        <li>Calibración de Medidores</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <img src="assets/Automatizacion.png" alt="Automatización">
-                    <h3>Automatización</h3>
-                    <ul>
-                        <li>Sensores de Nivel, Presión, Caudal</li>
-                        <li>Integración de señales Digitales y Analógicas</li>
-                        <li>RTU ( Unidad Terminal Remota)</li>
-                        <li>PLC</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <img src="assets/Comunicaciones.png" alt="Comunicaciones">
-                    <h3>Comunicaciones</h3>
-                    <ul>
-                        <li>Enlaces de Comunicación Serial, Fibra y Ethernet</li>
-                        <li>Convertidores de red</li>
-                        <li>Tableros de comunicación</li>
-                        <li>Switchs, Routers, modem celula</li>
-                        <li>Amplificadores de señal telefónica</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <img src="assets/suministro.png" alt="Suministro de Energía">
-                    <h3>Suministro de Energía</h3>
-                    <ul>
-                        <li>Fuentes de Alimentación</li>
-                        <li>Bancos y Cargadores de Baterías</li>
-                        <li>UPS</li>
-                        <li>Inversores de Voltaje</li>
-                        <li>Plantas de emergencia</li>
-                    </ul>
+            <div class="container about-content">
+                <div class="about-text animated fadeInRight">
+                    <h2>Desde 2021, proporcionando soluciones de ingeniería eléctrica.</h2>
+                    <p>Equipo humano altamente capacitado y comprometido. Amplia experiencia en la industria energética.</p>
+                    <a href="about.html" class="btn btn-secondary">Nosotros</a>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="contacto" class="slideshow">
-        <div class="container about-content">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <p>Ofrecemos soluciones energéticas adaptadas a las necesidades de nuestros clientes en Centroamérica.</p>
-                </div>
-                <div class="mySlides fade">
-                    <p>Nuestro equipo está compuesto por expertos en ingeniería eléctrica, listos para ayudarte.</p>
-                </div>
-                <div class="mySlides fade">
-                    <p>Comprometidos con la sostenibilidad y la eficiencia energética en cada proyecto.</p>
-                </div>
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span> 
-                    <span class="dot" onclick="currentSlide(2)"></span> 
-                    <span class="dot" onclick="currentSlide(3)"></span>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section id="servicios" class="slides services show-animate">
+            <div class="container animated fadeInRight">
+                <h2>Nuestros Servicios</h2>
+                <div class="service-grid">
+                    <a href="mantenimiento.html" style="text-decoration: none;">
+                        <div class="service-item">
+                            <img src="assets/Mantenimiento.png" alt="Mantenimiento Eléctrico">
+                            <h3>Mantenimiento Eléctrico</h3>
+                            <p>Garantiza el correcto funcionamiento y seguridad de los sistemas eléctricos en instalaciones industriales</p>
+                        </div>
+                    </a>
+                    <a href="calidad.html" style="text-decoration: none;">
+                        <div class="service-item">
+                            <img src="assets/calidad.png" alt="Calidad de Energía">
+                            <h3>Calidad de Energía</h3>
+                            <p>Optimizar el suministro eléctrico para evitar fluctuaciones y fallas que puedan afectar el rendimiento de los equipo</p>
+                        </div>
+                    </a>
+                    <a href="medicion.html" style="text-decoration: none;">
+                        <div class="service-item">
+                            <img src="assets/Medicion.png" alt="Medición de Energía">
+                            <h3>Medición de Energía</h3>
+                            <p>Monitorear y analizar el consumo eléctrico en tiempo real, ayudando a identificar áreas de mejora en eficiencia y a reducir costos.</p>
+                        </div>
+                    </a>
+                    <a href="automatizacion.html" style="text-decoration: none;">
+                        <div class="service-item">
+                            <img src="assets/Automatizacion.png" alt="Automatización">
+                            <h3>Automatización</h3>
+                            <p>controlar y optimizar los sistemas eléctricos de manera inteligente, mejorando la eficiencia y reduciendo el consumo energético.</p>
+                        </div>
+                    </a>
+                    <a href="comunicacion.html" style="text-decoration: none;">
+                        <div class="service-item">
+                            <img src="assets/Comunicaciones.png" alt="Comunicaciones">
+                            <h3>Comunicaciones</h3>
+                            <p>Conexión eficiente entre dispositivos y procesos, asegurando una transmisión de datos rápida y segura.</p>
+                        </div>
+                    </a>
+                    <a href="suministro.html" style="text-decoration: none;">
+                        <div class="service-item">
+                            <img src="assets/suministro.png" alt="Suministro de Energía">
+                            <h3>Suministro de Energía</h3>
+                            <p>Provisión eléctrica confiable y continua, adaptada a las necesidades específicas de cada industria.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            
+        </section>
+        
+        <section id="contacto" class="slides slideshow show-animate">
+            <div class="container about-content">
+                
+                <!-- Contenedor de botones sociales -->
+                <div class="social-buttons">
+                    <div class="icons-row">
+                        <a href="https://www.facebook.com/profile.php?id=61564886220585&mibextid=LQQJ4d" target="_blank" class="social-button facebook">
+                            <img src="assets/contact/facebook.png" alt="Facebook">
+                            
+                        </a>
+                        <a href="https://wa.me/+50251692332" target="_blank" class="social-button whatsapp">
+                            <img src="assets/contact/whatsapp.png" alt="WhatsApp">
+                        </a>
+                        <a href="#" target="_blank" class="social-button location">
+                            <img src="assets/contact/ubicacion.png" alt="Ubicación">
+                        </a>
+                    </div>
 
-            <!-- Formulario de contacto -->
-            <div class="contact-form-container">
-                <h3>Contáctanos</h3>
-                <form id="contactForm" action="/submit-form" method="POST">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                    <div class="contact-info">
+                        <h3>AMC, INGENIERÍA ELÉCTRICA</h3>
+                        <p>+502 5169 2332</p>
+                        <p>4ta Calle 7-80 Zona 2 Mixco, Colonia El Tesoro, Guatemala</p>
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <p>Ofrecemos <strong>SOLUCIONES ENERGÉTICAS</strong> adaptadas a las necesidades de nuestros clientes en Centroamérica.</p>
+                            </div>
+                            <div class="mySlides fade">
+                                <p>Nuestro equipo está compuesto por expertos en ingeniería eléctrica, <strong>LISTOS PARA AYUDARTE</strong>.</p>
+                            </div>
+                            <div class="mySlides fade">
+                                <p><strong>COMPROMETIDOS</strong> con la sostenibilidad y la eficiencia energética en cada proyecto.</p>
+                            </div>
+                            <div>
+                                <span class="dot" onclick="currentSlide(1)"></span> 
+                                <span class="dot" onclick="currentSlide(2)"></span> 
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
 
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+                <!-- Formulario de contacto -->
+                <div class="contact-form-container">
+                    <h3>Contáctanos</h3>
+                    <form id="contactForm" action="/submit-form" method="POST">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre">
 
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje"></textarea>
-                    
-                    <p class="privacy-policy">
-                        Al enviar este formulario, aceptas nuestras <a href="privacy.html" id="openModal">políticas de privacidad</a>.
-                    </p>
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                </form>
-                <p id="statusMessage"></p> <!-- Mensaje de estado -->
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje"></textarea>
+                        
+                        <p class="privacy-policy">
+                            Al enviar este formulario, aceptas nuestras <a href="privacy.html" id="openModal">políticas de privacidad</a>.
+                        </p>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                    <p id="statusMessage"></p> <!-- Mensaje de estado -->
+                </div>
             </div>
+        </section>
 
-            
-        </div>
-    </section>
+        <footer class="pie">
+            <div>
+                <p>&copy; 2024 AMC Ingeniería Eléctrica. Todos los derechos reservados.</p>
+            </div>
+        </footer>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 AMC Ingeniería Eléctrica. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+        <!-- Botón de volver al inicio -->
+        <a href="#" id="backToTop" class="slides back-to-top">
+            <img src="assets/icons/arrow-up.png" alt="Subir">
+        </a>
+    </div>
 </body>
 </html>

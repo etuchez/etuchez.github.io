@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables de color */
+:root {
+    --color-fondo: #1b1b1b;
+    --color-texto: #f5f5f5;
+    --color-acento: #f1c40f;
+    --color-borde: #333;
+    --color-hover: #f1c40f;
+}
+
+/* Estilo general del footer */
+.footer {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 500px;
+    text-align: center;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: var(--color-acento);
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: var(--color-texto);
+}
+
+.footer-nav a {
+    display: block;
+    color: var(--color-texto);
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.5s;
+}
+
+.footer-nav a:hover {
+    color: var(--color-hover);
+}
+
+.social-media a {
+    margin: 0 8px;
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-media a img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.social-media a:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Sección inferior del footer */
+.footer-bottom {
+    border-top: 1px solid var(--color-borde);
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: var(--color-texto);
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: left;
+    }
+}
+
+/* Contenedor principal a pantalla completa */
+.service-fullscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Altura completa de la pantalla */
+    color: #333; 
+    gap: 20px;
+    padding: 0 150px; /* Espacio lateral para separación */
+}
+
+/* Contenido del servicio a la izquierda */
+.service-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.service-content h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content ul li {
+    font-size: 18px;
+    color: #333;
+    position: relative;
+    margin-bottom: 20px; /* Espacio entre los elementos */
+    padding-left: 30px; /* Espacio para el nuevo marcador */
+    transition: background-color 0.3s ease; /* Efecto de cambio de color */
+}
+
+/* Marcador personalizado */
+.service-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; 
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar el alineamiento */
+    width: 10px; /* Ancho del marcador */
+    height: 10px; /* Alto del marcador */
+    border-radius: 50%; /* Hacerlo redondo */
+    background-color: var(--color-borde); /* Color del marcador */
+}
+
+/* Efecto de hover en los elementos de la lista */
+.service-content ul li:hover {
+    background-color: rgba(56, 63, 68, 0.1); /* Fondo suave al pasar el ratón */
+}
+
+/* Imagen del servicio a la derecha con ajuste */
+.service-image {
+    flex: 1;
+    height: 80vh; /* Ajusta la altura para que no ocupe toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-image img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover; /* Asegura que la imagen se adapte al contenedor */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.service-image img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}

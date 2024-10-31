@@ -1,3 +1,7 @@
+body {
+    padding-top: 70px; /* Ajuste según la altura del header */
+}
+
 /* Sección Nosotros */
 .abouts {
     padding: 60px 20px;

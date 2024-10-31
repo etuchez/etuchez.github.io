@@ -1,4 +1,13 @@
-let slideIndex = 1; // Asegúrate de declarar la variable aquí
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+let slideIndex = 1;
 
 showSlides(slideIndex);
 
@@ -75,4 +84,46 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         document.getElementById('statusMessage').textContent = ''; // Limpiar el mensaje
         window.scrollTo({ top: 0, behavior: 'smooth' }); // Regresar al principio del sitio
     }, 2000);
+});
+
+var root = document.querySelector(".nav-links")
+
+root.addEventListener("click",e=>{
+  var t = e.target,
+      li = t.closest("li")
+  if(li){
+    root.querySelectorAll("li").forEach(each=>each.classList.remove("active1")) 
+    li.classList.add("active1")
+  }
+})
+
+const images = document.querySelectorAll('.image');
+let currentIndex = 0; // Índice de la imagen actual
+
+// Función para aplicar el foco cíclicamente a las imágenes
+function autoFocus() {
+    resetFocus(); // Quitar la clase 'activo' de todas las imágenes
+    images[currentIndex].classList.add('activo'); // Agregar la clase 'activo' a la imagen actual
+    currentIndex = (currentIndex + 1) % images.length; // Cambiar al siguiente índice cíclicamente
+}
+
+// Función para quitar el foco de todas las imágenes
+function resetFocus() {
+    images.forEach(image => image.classList.remove('activo'));
+}
+
+// Iniciar el foco automático al cargar la página y cambiar cada 3 segundos (3000 ms)
+autoFocus();
+setInterval(autoFocus, 3000); // Cambia 3000 a otro valor si prefieres otro intervalo de tiempo
+
+// Mostrar botón al hacer scroll
+window.addEventListener("scroll", function() {
+    const backToTopButton = document.getElementById("backToTop");
+    
+    // Determina la visibilidad del botón al salir de la sección inicial
+    if (window.scrollY > window.innerHeight) {
+        backToTopButton.classList.add("visible");
+    } else {
+        backToTopButton.classList.remove("visible");
+    }
 });
