@@ -73,18 +73,39 @@ sections.forEach(section => {
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevenir el envío normal del formulario
 
+    const messageField = document.getElementById("message");
+    const nameField = document.getElementById("name");
+    const statusMessage = document.getElementById("statusMessage");
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+    // Validar si el mensaje contiene URLs
+    if (urlRegex.test(messageField.value)) {
+        statusMessage.textContent = "El mensaje no puede contener enlaces o URLs.";
+        statusMessage.style.color = "red";
+        return; // Detener la ejecución y no limpiar el formulario
+    }
+
+    // Validar si el nombre contiene URLs
+    if (urlRegex.test(nameField.value)) {
+        statusMessage.textContent = "El mensaje no puede contener enlaces o URLs.";
+        statusMessage.style.color = "red";
+        return; // Detener la ejecución y no limpiar el formulario
+    }
+
     // Mostrar el mensaje de éxito
-    document.getElementById('statusMessage').textContent = '¡Mensaje enviado exitosamente!';
+    statusMessage.textContent = "¡Mensaje enviado exitosamente!";
+    statusMessage.style.color = "green";
 
     // Limpiar los campos del formulario
     this.reset();
 
     // Redirigir al usuario al principio de la página después de 2 segundos
     setTimeout(function() {
-        document.getElementById('statusMessage').textContent = ''; // Limpiar el mensaje
+        statusMessage.textContent = ''; // Limpiar el mensaje
         window.scrollTo({ top: 0, behavior: 'smooth' }); // Regresar al principio del sitio
     }, 2000);
 });
+
 
 var root = document.querySelector(".nav-links")
 
@@ -126,4 +147,9 @@ window.addEventListener("scroll", function() {
     } else {
         backToTopButton.classList.remove("visible");
     }
+});
+
+document.getElementById('menuToggle').addEventListener('click', function () {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
 });

@@ -40,6 +40,17 @@ body {
 }
 
 /* Estilos de la navegación */
+.menu-toggle {
+    display: none; /* Oculto en pantallas grandes */
+    position: absolute;
+    top: 15px; /* Ajusta la posición vertical */
+    right: 20px; /* Ajusta la posición horizontal */
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10; /* Asegúrate de que esté por encima del resto del contenido */
+}
+
 .navbar {
     background-color: var(--negro);    
     height: 60px;
@@ -283,6 +294,10 @@ span{
     background-repeat: no-repeat;
 }  
 
+.pentagon-image-phone{
+    display: none;
+}
+
 /* Sección Nosotros */
 .about {
     height: 100vh;
@@ -392,23 +407,7 @@ span{
     margin: 0 auto 20px;
 }
 
-/* Responsive ajustes */
-@media (max-width: 1024px) {
-    .service-items {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
 
-@media (max-width: 600px) {
-    .service-items {
-        grid-template-columns: 1fr; 
-    }
-
-    .about-text {
-        padding: 20px; /* Ajustes para pantallas pequeñas */
-        text-align: center; /* Centra el texto */
-    }
-}
 
 /* Contenedor de botones sociales */
 .social-buttons {
@@ -579,16 +578,6 @@ span{
     color: var(--negro);
     padding: 20px 0;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .service-grid {
-        grid-template-columns: 1fr; /* Cambia a una columna */
-    }
-
-    .about-content {
-        flex-direction: column; /* Cambia a columna */
-    }
 }
 
 /* Animaciones*/
@@ -789,4 +778,232 @@ animation-fill-mode: both;
 .hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+@media (max-width: 480px) {
+    /*Inicio de Navegación*/
+    /* Barra de navegación */
+    .navbar {
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        background-color: var(--negro); /* Fondo oscuro para contraste */
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade sombra para darle un efecto flotante */
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    /* Logo */
+    .logo img {
+        margin-top: 10px;
+        margin-left: 10px;
+        max-width: 80px; /* Tamaño reducido del logo */
+        height: auto;
+        transition: transform 0.3s ease-in-out; /* Transición suave al hacer hover */
+    }
+
+    .logo img:hover {
+        transform: scale(1.1); /* Efecto de zoom suave al pasar el cursor */
+    }
+
+    /* Contenedor del menú */
+    .container-menu {
+        display: flex;
+        justify-content: space-between; /* Alinea el logo y el menú */
+        align-items: center;
+    }
+
+    /* Menú de navegación */
+    .nav-links {
+        display: none; /* Esconde los enlaces inicialmente */
+        flex-direction: column; /* Enlaces apilados */
+        background-color: var(--negro); /* Fondo oscuro para el menú */
+        width: 100%; /* Ancho completo */
+        padding: 20px 0;
+        position: absolute; /* El menú se posiciona sobre el contenido */
+        top: 100%; /* Justo debajo de la barra de navegación */
+        left: 0;
+        z-index: 100; /* Para asegurarse de que el menú esté por encima */
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease; /* Transición suave para la aparición */
+    }
+
+    /* Enlaces en el menú */
+    .nav-links li {
+        text-align: left;
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separador sutil entre los enlaces */
+    }
+
+    .nav-links a {
+        color: var(--blanco); /* Color blanco para los enlaces */
+        text-decoration: none; /* Eliminar subrayado */
+        font-size: 16px; /* Tamaño adecuado */
+        display: block;
+        transition: color 0.3s ease; /* Transición suave para color */
+    }
+
+    .nav-links a:hover {
+        color: var(--azul); /* Color al pasar el mouse */
+    }
+
+    /* Icono del menú */
+    .menu-toggle {
+        display: block; /* Asegura que el icono de menú sea visible */
+        font-size: 28px; /* Aumenta el tamaño del icono */
+        color: var(--blanco); /* Color del icono */
+        cursor: pointer;
+        transition: transform 0.3s ease; /* Transición suave para el icono */
+    }
+
+    .menu-toggle:hover {
+        transform: rotate(90deg); /* Efecto de giro suave al hacer hover */
+    }
+
+    /* Estado activo del menú */
+    .nav-links.active {
+        display: flex; /* Muestra los enlaces cuando se activa el menú */
+        opacity: 1; /* Hace visible el menú */
+    }
+    /* Fin de navegación */
+    /* Inicio de sección principal*/
+    .pentagon-wrapper{
+        margin-right: 10px;
+        width: 80%;
+        height: 50%;
+    }
+
+    .pentagon-image-phone {
+        display: block; /* Asegura que esté visible */
+        position: fixed; /* Fija la imagen */
+        bottom: 50px;
+        z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .pentagon-image{
+        display: none;
+    };
+
+    
+    .pentagon-image-phone {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    } 
+
+    .hero h1 {
+        font-size: 30px; /* Reduce el tamaño del título */
+        margin-right: 20px;
+    }
+
+    .hero p {
+        font-size: 15px; /* Reduce el tamaño del texto */
+        margin-right: 20px;
+    }
+
+    .hero .btn {
+        padding: 10px 20px; /* Ajusta el tamaño de los botones */
+        font-size: 12px;
+    }
+    /*Fin de sección principal*/
+    /*Inicio de sección nosotros*/
+    #nosotros{
+        display: flex;
+        flex-direction: column; /* Cambia a columna */
+        gap: 10px;
+    }
+
+    .about-text{
+        margin-left: auto;
+        display: flex;
+        flex-direction: column; /* Cambia a columna */
+        gap: 10px;
+        
+    }
+
+    .about-text h2{
+        font-size: 26px; /* Reduce el tamaño del título */
+        margin-right: 20px;
+        text-align: right;
+    }
+
+    .about-text p {
+        font-size: 18px; /* Reduce el tamaño del texto */
+        margin-right: 20px;
+        text-align: right;
+    }
+
+    .about-text .btn {
+        margin-top: 30px; 
+        margin-left: auto;
+        margin-right: 20px;
+        font-size: 12px;
+    }
+    
+
+    /*Fin de sección nosotros*/
+    /*Inicio de sección servicios*/
+    .services {
+        height: auto; /* Permitir que la altura crezca según el contenido */
+        padding: 15px 10px; /* Reducir el relleno para dispositivos pequeños */
+        background-color: var(--negro); /* Mantener el color de fondo */
+        text-align: center; /* Centrar el contenido */
+        
+        display: flex;
+        flex-direction: column; /* Cambiar a columna para apilar los elementos */
+        align-items: center;
+        justify-content: flex-start; /* Ajustar elementos hacia el inicio */
+        gap: 20px; /* Añadir espacio entre los elementos */
+    }
+    .services h2{
+        font-size: 26px; /* Reduce el tamaño del título */
+        margin-right: 20px;
+    }
+    /*Fin de sección servicios*/
+    /*Inicio de sección contacto*/
+    #contacto {
+        padding: 10px;
+        height: auto;
+        margin-top: 50px;
+    }
+    .contact-form-container {
+        padding: 15px;
+        max-width: 100%; /* Asegura que no se desborde */
+    }    
+    .about-content {
+        display: flex;
+        flex-direction: row; /* Cambia a columna */
+        gap: 10px;
+    }
+
+    .mySlides p{
+        font-size: 17px;
+    }
+
+    .contact-info p{
+        font-size: 17px;
+    }
+
+    /*Fin de sección contacto*/
+
+    .pie {
+        background-color: var(--blanco); /* Mantener el color de fondo */
+        color: var(--negro); /* Mantener el color del texto */
+        padding: 15px 10px; /* Reducir el padding para pantallas pequeñas */
+        text-align: center; /* Centrar el texto */
+        font-size: 14px; /* Ajustar el tamaño de fuente para dispositivos pequeños */
+        line-height: 1.4; /* Mejorar la legibilidad */
+        word-wrap: break-word; /* Asegurarse de que el texto largo no se desborde */
+    }
+
+    .pie p{
+        font-size: 12px;
+    }
+
+    #backToTop{
+        display: none;
+    }
+
 }

@@ -46,3 +46,47 @@ footer {
     text-align: center;
     margin-top: 40px; /* Espacio arriba del pie de página */
 }
+
+@media (max-width: 480px) {
+    /* Ajuste para el cuerpo */
+    body {
+        padding-top: 0; /* Ajuste para pantallas más pequeñas */
+    }
+
+    /* Sección Nosotros */
+    .abouts {
+        padding: 30px 10px; /* Reduce el padding */
+        text-align: center; /* Centra el texto en lugar de alinearlo a la izquierda */
+    }
+
+    .abouts h2 {
+        font-size: 28px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+        margin-bottom: 15px; /* Menor espacio abajo */
+    }
+
+    .abouts p {
+        font-size: 16px; /* Reducir tamaño de texto */
+        margin-bottom: 20px; /* Reduce el espacio inferior */
+    }
+
+    .about-images {
+        text-align: center; /* Asegura que la imagen esté centrada */
+        margin-bottom: 20px; /* Espacio debajo de la imagen */
+    }
+
+    .about-images img {
+        width: 200px; /* Reduce el tamaño de la imagen */
+        height: auto; /* Mantiene la proporción */
+        border-radius: 8px; /* Bordes más redondeados */
+    }
+
+    .about-images img:hover {
+        transform: scale(1.03); /* Ajuste de la animación al hacer hover */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px 0; /* Reduce el padding */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+}

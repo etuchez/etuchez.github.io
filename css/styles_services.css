@@ -3,16 +3,78 @@
 /* Variables de color */
 :root {
     --color-fondo: #1b1b1b;
-    --color-texto: #f5f5f5;
+    --blanco: #f5f5f5;
     --color-acento: #f1c40f;
     --color-borde: #333;
     --color-hover: #f1c40f;
+    --negro: #272727;
+}
+
+/* Estilos de la navegación */
+.navbar-services {
+    background-color: var(--blanco);    
+    height: 60px;
+    
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-menu-services {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacia el logo y el menú */
+    width: 100%; /* Hace que el contenedor ocupe todo el ancho */
+    max-width: 1200px; /* Opcional: limita el ancho máximo */
+}
+
+.nav-links-services {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav-links-services a {
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color .10s ease; /* Agrega transiciones */
+}
+
+li {
+    position: relative;
+  }
+  
+li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--blanco);
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+  
+li:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
 
 /* Estilo general del footer */
 .footer {
     background-color: var(--color-fondo);
-    color: var(--color-texto);
+    color: var(--blanco);
     padding: 40px 0;
     font-family: Arial, sans-serif;
 }
@@ -64,16 +126,15 @@
 }
 
 .social-media a img {
-    width: 40px;
-    height: 40px;
-    filter: grayscale(100%);
-    transition: filter 0.3s;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .social-media a:hover img {
-    filter: grayscale(0%);
-    transform: scale(1.1);
-    opacity: 0.9;
+    transform: scale(1.5);
 }
 
 /* Sección inferior del footer */
@@ -84,17 +145,6 @@
     color: var(--color-texto);
     text-align: center;
     margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-    .footer-container {
-        flex-wrap: nowrap;
-        gap: 30px;
-    }
-
-    .footer-section {
-        text-align: left;
-    }
 }
 
 /* Contenedor principal a pantalla completa */
@@ -178,4 +228,107 @@
 
 .service-image img:hover {
     transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+@media (max-width: 480px) {
+    /* Ajustes generales */
+    body {
+        padding-top: 0; /* Ajuste de espacio superior para pequeños dispositivos */
+    }
+
+    /* Navegación */
+    .navbar-services {
+        height: 50px; /* Reduce la altura de la barra de navegación */
+    }
+
+    .container-menu-services {
+        flex-direction: column; /* Cambia a columna para mejor organización */
+        align-items: flex-start; /* Alinea el contenido a la izquierda */
+    }
+
+    .nav-links-services {
+        flex-direction: column; /* Hace que los enlaces se apilen verticalmente */
+        gap: 10px; /* Menor espacio entre enlaces */
+        padding-left: 0; /* Elimina el padding a la izquierda */
+    }
+
+    .nav-links-services a {
+        font-size: 14px; /* Reducir tamaño de fuente para pantallas pequeñas */
+        font-weight: normal; /* Menos énfasis en los enlaces */
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px 10px; /* Menos espacio en el footer */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Cambia la dirección de las secciones a columna */
+        align-items: center; /* Centra los elementos en el footer */
+    }
+
+    .footer-section {
+        min-width: 100%; /* Hace que las secciones ocupen todo el ancho */
+        text-align: center; /* Centra el texto */
+    }
+
+    .footer-section h3, .footer-section h4 {
+        font-size: 18px; /* Reducir tamaño de los encabezados */
+    }
+
+    .contact-info p {
+        font-size: 0.8rem; /* Reduce el tamaño de texto */
+    }
+
+    .footer-nav a {
+        font-size: 0.8rem; /* Ajusta tamaño de fuente */
+    }
+
+    /* Social media icons */
+    .social-media a img {
+        width: 40px; /* Reduce el tamaño de los íconos sociales */
+        height: 40px; 
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem; /* Reduce el tamaño de fuente */
+        margin-top: 15px; /* Menor margen superior */
+    }
+
+    /* Sección de servicio a pantalla completa */
+    .service-fullscreen {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        padding: 0 20px; /* Menos espacio lateral */
+    }
+
+    .service-content {
+        flex: none; /* El contenido no debe ocupar todo el ancho */
+        padding-right: 0; /* Elimina el espacio extra a la derecha */
+        margin-bottom: 20px; /* Agrega espacio inferior */
+    }
+
+    .service-content h3 {
+        font-size: 24px; /* Reduce el tamaño del título */
+    }
+
+    .service-content p {
+        font-size: 16px; /* Reduce el tamaño de texto */
+    }
+
+    .service-content ul li {
+        font-size: 16px; /* Ajusta tamaño de texto de la lista */
+        margin-bottom: 15px; /* Menor espacio entre elementos */
+        padding-left: 25px; /* Ajusta el espacio del marcador */
+    }
+
+    .service-image {
+        flex: none; /* Evita que la imagen ocupe todo el espacio */
+        height: auto; /* Ajusta la altura de la imagen para móviles */
+        margin-bottom: 20px; /* Espacio debajo de la imagen */
+    }
+
+    .service-image img {
+        width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
 }
