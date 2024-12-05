@@ -298,13 +298,15 @@ li:hover::before {
     /* Sección de servicio a pantalla completa */
     .service-fullscreen {
         flex-direction: column; /* Apilar los elementos verticalmente */
-        padding: 0 20px; /* Menos espacio lateral */
+        padding: 0px 20px; /* Menos espacio lateral */
+        height: auto;
     }
 
     .service-content {
         flex: none; /* El contenido no debe ocupar todo el ancho */
         padding-right: 0; /* Elimina el espacio extra a la derecha */
         margin-bottom: 20px; /* Agrega espacio inferior */
+        margin-top: 20px;
     }
 
     .service-content h3 {
